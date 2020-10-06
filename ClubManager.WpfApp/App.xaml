@@ -18,6 +18,26 @@
                 <Setter Property="Control.Margin" Value="5,10,0,20"></Setter>
             </Style>
 
+            <Style TargetType="TextBox">
+                <Setter Property="Background" Value="LightBlue"></Setter>
+                <Setter Property="Margin" Value="2"></Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsFocused" Value="True">
+                        <Setter Property="Background" Value="Yellow"></Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style TargetType="DatePicker">
+                <Setter Property="Background" Value="LightBlue"></Setter>
+                <Setter Property="Margin" Value="2"></Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsFocused" Value="True">
+                        <Setter Property="Background" Value="Yellow"></Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,6 +1,7 @@
-﻿<Window x:Class="ClubManager.WpfApp.Windows.MemberWindow"
+﻿<mah:MetroWindow x:Class="ClubManager.WpfApp.Windows.MemberWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClubManager.WpfApp.Windows"
@@ -8,7 +9,7 @@
         Title="MemberWindow" Height="250" Width="400" MinHeight="200" MinWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -16,20 +17,23 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="tblHeadline" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="14">Member</TextBlock>
+        <TextBlock Style="{StaticResource ResourceKey=FormCaptionStyle}" x:Name="tblHeadline" Grid.ColumnSpan="3" VerticalAlignment="Center">Member</TextBlock>
         <Label Grid.Row="1" Grid.Column="0">Vorname:</Label>
-        <TextBox VerticalAlignment="Center" Grid.Row="1" Padding="6" Grid.Column="1" Text="{Binding Path=Firstname}"/>
+        <TextBox VerticalAlignment="Center" Grid.Row="1" Padding="6" Grid.Column="2" Text="{Binding Path=Firstname}"/>
         <Label Grid.Row="2" Grid.Column="0">Nachname:</Label>
-        <TextBox VerticalAlignment="Center" Grid.Row="2" Padding="6" Grid.Column="1" Text="{Binding Path=Lastname}"/>
-        <Label Grid.Row="3" Grid.Column="0">Geburtsdatum:</Label>
-        <DatePicker VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" SelectedDate="{Binding Path=BirthDate}"/>
+        <TextBox VerticalAlignment="Center" Grid.Row="2" Padding="6" Grid.Column="2" Text="{Binding Path=Lastname}"/>
+        <Label Grid.Row="3" Grid.Column="0" >Geburtsdatum:</Label>
+        <DatePicker VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" SelectedDate="{Binding Path=BirthDate}"/>
 
-        <UniformGrid Grid.Row="5" Grid.ColumnSpan="2" Columns="2">
+        <UniformGrid Grid.Row="5" Grid.ColumnSpan="3" Columns="2">
             <Button x:Name="btnSave" Margin="10" Padding="10">_Sichern</Button>
             <Button x:Name="btnCancel" Margin="10" Padding="10">_Abbruch</Button>
         </UniformGrid>
     </Grid>
-</Window>
+</mah:MetroWindow>
+

@@ -1,4 +1,5 @@
 ﻿using ClubManager.Model;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,7 +17,7 @@ namespace ClubManager.WpfApp.Windows
     /// <summary>
     /// Interaction logic for MemberWindow.xaml
     /// </summary>
-    public partial class MemberWindow : Window
+    public partial class MemberWindow : MetroWindow
     {
         private Member _memberToEdit;
         private Member _member;
